@@ -15,7 +15,6 @@ defmodule ExCelery do
   defp connect(broker_url, attempt \\ 0) do
     case Connection.open(broker_url) do
       {:ok, connection} ->
-        attempt = 0
         Process.monitor(connection.pid)
         Logger.info "Connected to broker #{broker_url}"
         Channel.open(connection)
