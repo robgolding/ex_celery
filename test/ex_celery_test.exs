@@ -1,7 +1,7 @@
 defmodule ExCeleryTest do
   use ExUnit.Case
 
-  @broker_url "amqp://guest:guestd@localhost/"
+  @broker_url "amqp://guest:guest@localhost"
 
   setup do
     {:ok, amqp} = AMQP.Connection.open(@broker_url)
