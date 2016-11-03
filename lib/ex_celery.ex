@@ -3,17 +3,17 @@ defmodule ExCelery do
   use AMQP
   use GenServer
 
-  def start_link(opts \\ []) do
-    GenServer.start_link(__MODULE__, opts, [])
+  def start_link(config \\ [], opts \\ []) do
+    GenServer.start_link(__MODULE__, config, opts)
   end
 
-  def init(opts) do
-    broker_url = Keyword.get(opts, :broker_url, "amqp://guest:guest@localhost")
+  def init(config) do
+    broker_url = Keyword.get(config, :broker_url, "amqp://guest:guest@localhost")
     {:ok, channel} = connect(broker_url)
     state = %{
       channel: channel,
       broker_url: broker_url,
-      exchange: Keyword.get(opts, :exchange, "celery"),
+      exchange: Keyword.get(config, :exchange, "celery"),
     }
     {:ok, state}
   end
