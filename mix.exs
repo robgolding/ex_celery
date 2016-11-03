@@ -27,7 +27,8 @@ defmodule ExCelery.Mixfile do
 
   defp description do
     """
-    Celery producer for Elixir;
+    A Celery producer for Elixir. Currently supports the RabbitMQ broker, and
+    only publishing tasks (not running them or retrieving their result).
     """
   end
 
@@ -37,7 +38,7 @@ defmodule ExCelery.Mixfile do
      licenses: ["MIT"],
      links: %{
        "GitHub" => "https://github.com/robgolding/ex_celery",
-       "Docs" => "http://robgolding.github.io/ex_celery/",
+       "Docs" => "https://github.com/robgolding/ex_celery",
      },
   ]
   end
