@@ -4,7 +4,7 @@ defmodule ExCelery.Mixfile do
   def project do
     [
       app: :ex_celery,
-      version: "0.1.2",
+      version: "0.1.3",
       description: description(),
       package: package(),
       deps: deps(),
