@@ -1,6 +1,6 @@
 # ex_celery
 
-[![Build Status](https://travis-ci.org/robgolding/ex_celery.svg?branch=master)](https://travis-ci.org/robgolding/ex_celery)
+[![Build Status](https://travis-ci.org/robgolding/ex_celery.svg?branch=develop)](https://travis-ci.org/robgolding/ex_celery)
 
 
 `ex_celery` is a Celery task producer for Elixir. It currently only supports
@@ -12,7 +12,7 @@ First, add `ex_celery` to your `mix.exs` dependencies:
 
 ```elixir
 def deps do
-  [{:ex_celery, "~> 0.1.0"}]
+  [{:ex_celery, "~> 0.1.1"}]
 end
 ```
 
