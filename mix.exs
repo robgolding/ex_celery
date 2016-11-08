@@ -12,7 +12,18 @@ defmodule ExCelery.Mixfile do
   end
 
   def application do
+    application(Mix.env)
+  end
+
+  def application(:test) do
     [applications: [:logger]]
+  end
+
+  def application(_) do
+    [
+      applications: [:logger],
+      mod: {ExCelery.Application, []},
+    ]
   end
 
   defp deps do

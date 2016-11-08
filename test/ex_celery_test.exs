@@ -12,7 +12,7 @@ defmodule ExCeleryTest do
     ])
 
     {:ok, celery} = ExCelery.start_link
-    {:ok, %{chan: chan, celery: celery}}
+    {:ok, %{chan: chan}}
   end
 
   defp get_message(chan) do
@@ -20,8 +20,8 @@ defmodule ExCeleryTest do
     {Poison.Parser.parse!(payload), meta}
   end
 
-  test "apply_async empty", %{chan: chan, celery: celery} do
-    ExCelery.apply_async(celery, "test.task")
+  test "apply_async empty", %{chan: chan} do
+    ExCelery.apply_async("test.task")
     :timer.sleep(100)
     {payload, meta} = get_message(chan)
     assert payload["task"] == "test.task"
@@ -31,8 +31,8 @@ defmodule ExCeleryTest do
     assert meta[:content_type] == "application/json"
   end
 
-  test "apply_async with args", %{chan: chan, celery: celery} do
-    ExCelery.apply_async(celery, "test.task", [
+  test "apply_async with args", %{chan: chan} do
+    ExCelery.apply_async("test.task", [
       args: ["arg_1"],
       kwargs: %{"kwarg_1": "value_1"},
     ])
@@ -46,8 +46,8 @@ defmodule ExCeleryTest do
     assert meta[:persistent] == true
   end
 
-  test "apply_async with opts", %{chan: chan, celery: celery} do
-    ExCelery.apply_async(celery, "test.task", [
+  test "apply_async with opts", %{chan: chan} do
+    ExCelery.apply_async("test.task", [
       routing_key: "test",
       content_encoding: "ascii",
       persistent: false
