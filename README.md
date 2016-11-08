@@ -12,7 +12,7 @@ First, add `ex_celery` to your `mix.exs` dependencies:
 
 ```elixir
 def deps do
-  [{:ex_celery, "~> 0.1.3"}]
+  [{:ex_celery, "~> 0.2.0"}]
 end
 ```
 
