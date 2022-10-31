@@ -16,7 +16,7 @@
      [:mix], []},
   rabbit_common:
     {:git, "https://github.com/jbrisbin/rabbit_common.git",
-     "80814606ae23cc820c74e443383e192cd69ec030", [ref: "."]},
+     "80814606ae23cc820c74e443383e192cd69ec030", []},
   elixir_uuid:
     {:hex, :elixir_uuid, "1.2.1",
      "dce506597acb7e6b0daeaff52ff6a9043f5919a4c3315abb4143f0b00378c097", [:mix], [], "hexpm",
