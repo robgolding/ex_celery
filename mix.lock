@@ -1,24 +1,9 @@
 %{
-  amqp:
-    {:hex, :amqp, "0.1.4", "5d9112c3a850234559073c23fda173364dfd11d8ce8d0138cd46f653fdc55f08",
-     [:mix], [{:amqp_client, ">= 3.5.6", [hex: :amqp_client, optional: false]}]},
-  amqp_client:
-    {:git, "https://github.com/jbrisbin/amqp_client.git",
-     "d50aec00b94f0766a048b4eceaf25ddfdeeb1d86", []},
-  meck:
-    {:hex, :meck, "0.8.4", "59ca1cd971372aa223138efcf9b29475bde299e1953046a0c727184790ab1520",
-     [:rebar, :make], []},
-  mock:
-    {:hex, :mock, "0.2.0", "5991877be6bb514b647dbd6f4869bc12bd7f2829df16e86c98d6108f966d34d7",
-     [:mix], [{:meck, "~> 0.8.2", [hex: :meck, optional: false]}]},
-  poison:
-    {:hex, :poison, "2.2.0", "4763b69a8a77bd77d26f477d196428b741261a761257ff1cf92753a0d4d24a63",
-     [:mix], []},
-  rabbit_common:
-    {:git, "https://github.com/jbrisbin/rabbit_common.git",
-     "80814606ae23cc820c74e443383e192cd69ec030", []},
-  elixir_uuid:
-    {:hex, :elixir_uuid, "1.2.1",
-     "dce506597acb7e6b0daeaff52ff6a9043f5919a4c3315abb4143f0b00378c097", [:mix], [], "hexpm",
-     "f7eba2ea6c3555cea09706492716b0d87397b88946e6380898c2889d68585752"}
+  "amqp": {:hex, :amqp, "0.1.4", "5d9112c3a850234559073c23fda173364dfd11d8ce8d0138cd46f653fdc55f08", [:mix], [{:amqp_client, ">= 3.5.6", [hex: :amqp_client, repo: "hexpm", optional: false]}], "hexpm", "a75d9b9283f306627b1d72a1ae326bb8c2910c5cd8198fa036e575b74b340ef4"},
+  "amqp_client": {:git, "https://github.com/jbrisbin/amqp_client.git", "d50aec00b94f0766a048b4eceaf25ddfdeeb1d86", []},
+  "elixir_uuid": {:hex, :elixir_uuid, "1.2.1", "dce506597acb7e6b0daeaff52ff6a9043f5919a4c3315abb4143f0b00378c097", [:mix], [], "hexpm", "f7eba2ea6c3555cea09706492716b0d87397b88946e6380898c2889d68585752"},
+  "meck": {:hex, :meck, "0.8.4", "59ca1cd971372aa223138efcf9b29475bde299e1953046a0c727184790ab1520", [:make, :rebar], [], "hexpm", "2cdfbd0edd8f62b3d2061efc03c0e490282dd2ea6de44e15d2006e83f4f8eead"},
+  "mock": {:hex, :mock, "0.2.0", "5991877be6bb514b647dbd6f4869bc12bd7f2829df16e86c98d6108f966d34d7", [:mix], [{:meck, "~> 0.8.2", [hex: :meck, repo: "hexpm", optional: false]}], "hexpm", "f48c0db393124cb270bf45b3a44c8931604fa39f2dcd503c3af796a58c0985d7"},
+  "poison": {:hex, :poison, "2.2.0", "4763b69a8a77bd77d26f477d196428b741261a761257ff1cf92753a0d4d24a63", [:mix], [], "hexpm", "519bc209e4433961284174c497c8524c001e285b79bdf80212b47a1f898084cc"},
+  "rabbit_common": {:git, "https://github.com/jbrisbin/rabbit_common.git", "80814606ae23cc820c74e443383e192cd69ec030", [ref: ""]},
 }
