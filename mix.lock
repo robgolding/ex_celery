@@ -14,9 +14,7 @@
   poison:
     {:hex, :poison, "2.2.0", "4763b69a8a77bd77d26f477d196428b741261a761257ff1cf92753a0d4d24a63",
      [:mix], []},
-  rabbit_common:
-    {:git, "https://github.com/jbrisbin/rabbit_common.git",
-     "80814606ae23cc820c74e443383e192cd69ec030", []},
+  rabbit_common: {:git, "https://github.com/jbrisbin/rabbit_common.git", tag: "rabbitmq-3.5.6"},
   elixir_uuid:
     {:hex, :elixir_uuid, "1.2.1",
      "dce506597acb7e6b0daeaff52ff6a9043f5919a4c3315abb4143f0b00378c097", [:mix], [], "hexpm",
